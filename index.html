@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codex 自动化 — AAR 桌面应用</title>
+<style>
+  :root {
+    --bg:      #fafbfc;
+    --surface: #ffffff;
+    --border:  #e5e7eb;
+    --text:    #1a1a2e;
+    --text-2:  #6b7280;
+    --accent:  #5b6af0;
+    --green:   #10b981;
+    --radius:  14px;
+    --font:    'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    background-image:
+      radial-gradient(ellipse 60% 50% at 20% 20%, rgba(99,102,241,.06), transparent),
+      radial-gradient(ellipse 50% 60% at 80% 80%, rgba(16,185,129,.04), transparent);
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px 36px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,.06);
+    text-align: center;
+  }
+  .logo {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    border-radius: 14px; display: inline-flex; align-items: center;
+    justify-content: center; color: #fff; font-weight: 700; font-size: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(91,106,240,.3);
+  }
+  h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 4px; }
+  .subtitle { font-size: 14px; color: var(--text-2); margin-bottom: 24px; }
+
+  .info-list { text-align: left; margin-bottom: 28px; }
+  .info-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+  .info-item:last-child { border: none; }
+  .info-icon { font-size: 18px; width: 24px; text-align: center; }
+  .info-label { color: var(--text-2); min-width: 80px; }
+  .info-value { font-weight: 600; }
+
+  .download-btn {
+    display: inline-block; padding: 14px 40px;
+    background: linear-gradient(135deg, var(--accent), #7c3aed);
+    color: #fff; font-size: 16px; font-weight: 700;
+    border: none; border-radius: 12px; cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(91,106,240,.3);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .download-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(91,106,240,.4); }
+
+  .footer { font-size: 12px; color: var(--text-2); margin-top: 16px; }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="logo">自</div>
+  <h1>Codex 自动化</h1>
+  <p class="subtitle">AAR 桌面状态面板 — AI CLI 自动恢复监控器</p>
+
+  <div class="info-list">
+    <div class="info-item">
+      <span class="info-icon">🖥</span>
+      <span class="info-label">平台</span>
+      <span class="info-value">Windows 10 / 11</span>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">📦</span>
+      <span class="info-label">版本</span>
+      <span class="info-value" id="version">v2.0.0</span>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">💾</span>
+      <span class="info-label">大小</span>
+      <span class="info-value" id="size">~14 MB</span>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">🔒</span>
+      <span class="info-label">权限</span>
+      <span class="info-value">无需管理员</span>
+    </div>
+  </div>
+
+  <a class="download-btn" href="Codex自动化.exe" download>
+    ⬇ 下载 Windows 版
+  </a>
+
+  <p class="footer">
+    下载后双击运行即可，无需安装。<br>
+    项目地址: <a href="https://github.com">GitHub</a>
+  </p>
+</div>
+
+</body>
+</html>
